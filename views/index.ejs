@@ -1,0 +1,38 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats & Strategy Field</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Player Stats & Strategy Field</h1>
+
+    <!-- Form to input player stats -->
+    <form action="/calculate" method="POST">
+        <label for="name">Player Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="points">Points Scored:</label>
+        <input type="number" id="points" name="points" required>
+
+        <label for="assists">Assists:</label>
+        <input type="number" id="assists" name="assists" required>
+
+        <label for="rebounds">Rebounds:</label>
+        <input type="number" id="rebounds" name="rebounds" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Div for displaying the strategy field -->
+    <div id="strategy-field">
+        <h2>Strategy Field Design</h2>
+        <canvas id="strategyCanvas" width="500" height="500"></canvas>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
